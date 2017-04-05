@@ -20,7 +20,7 @@ const httpProxy = require('http-proxy');    // 代理模块
 
 const open = require('open');   // 为方便浏览页面，默认加载open模块，可以自动打开浏览器进行预览
 
-const PORT = 3000 || process.env.PORT;    // 设置监听端口，默认3000
+const PORT = process.env.PORT || 3000;    // 设置监听端口，默认3000
 
 const siteDir = '../test/';     // 设置网站文件目录
 
