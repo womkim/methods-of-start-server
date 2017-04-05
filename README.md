@@ -1,2 +1,2 @@
 # methods-of-start-server
-about starting server base on node
+about starting server base on node series

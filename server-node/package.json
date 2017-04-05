@@ -1,0 +1,19 @@
+{
+  "name": "server-node",
+  "version": "1.0.0",
+  "description": "start server with node",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "server",
+    "node"
+  ],
+  "author": "womkim",
+  "license": "ISC",
+  "dependencies": {
+    "http-proxy": "^1.16.2",
+    "open": "0.0.5"
+  }
+}
