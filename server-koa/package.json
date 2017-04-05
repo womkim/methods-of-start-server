@@ -1,0 +1,22 @@
+{
+  "name": "server-koa",
+  "version": "1.0.0",
+  "description": "create server with koa",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "koa",
+    "node",
+    "server"
+  ],
+  "author": "womkim",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^1.2.4",
+    "koa-proxy": "^0.8.0",
+    "koa-static-server": "^1.0.0",
+    "open": "0.0.5"
+  }
+}
