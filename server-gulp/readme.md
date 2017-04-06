@@ -44,7 +44,8 @@ npm run build
 
 #### 注意
 
-- 这里文件名没有取server，因为gulp文件规定为gulpfile.js
-- 在命令行直接输入gulp，这里的处理方式是将直接打包文件到dist，但不会对文件进行版本管理
-- 打包压缩的文件都有sourcemap
-- 代码有详细注释，应该比较容易看懂
+- 这里文件名没有取server，因为gulp文件规定为gulpfile.js。
+- 在命令行直接输入gulp，这里的处理方式是将直接打包文件到dist，但不会对文件进行版本管理。
+- 打包压缩的文件都有sourcemap。
+- 代码有详细注释，应该比较容易看懂。
+- **没有版本管理的文件在dist文件夹中，但运行`npm run build`命令后，会将有版本控制的文件生成到build文件夹下，但没有对文件中的`index.html`做版本控制。
