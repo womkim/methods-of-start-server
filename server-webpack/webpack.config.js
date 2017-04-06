@@ -1,10 +1,21 @@
+/**
+ *  @author: womkim
+ *  @date: 2017-04-05
+ *  @comment: 
+ *      使用webpack进行工程化处理，创建服务器，并进行代理
+ *      这里对HTML文件进行压缩处理
+ *      可以使用 less 进行css编写，工具将会对less进行编译，自动兼容IE8+浏览器，并转换为css文件，自动压缩
+ *      可以使用es6进行编码，工具使用babel进行代码编译，使用gulp-uglify进行代码压缩
+ *      对图片文件将进行优化处理
+ *      使用eslint进行代码检查
+ */
+
 'use strict';
 
 const path = require('path');
 const fs = require('fs');
 
 const DEBUG = process.env.NODE_ENV === 'dev';		//定义是否为开发环境
-console.log('DEBUG: '+DEBUG);
 
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -27,7 +38,7 @@ pluginsArr.push(new webpack.optimize.CommonsChunkPlugin({		//提取公共模块
 					// chunks: ["A", "B"]
 				}));
 pluginsArr.push(new ExtractTextPlugin('css/[name].[chunkhash:8].css'));		//提取css，在浏览器中引用
-pluginsArr.push(new webpack.optimize.OccurrenceOrderPlugin());		//顺序？The entry chunks have higher priority for file size.
+pluginsArr.push(new webpack.optimize.OccurrenceOrderPlugin());		//The entry chunks have higher priority for file size.
 pluginsArr.push(new webpack.optimize.DedupePlugin());		//代码量变大，复制依赖树中相同的文件，防止复制重复的代码到包中？
 pluginsArr.push(new webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}))	//Limit the maximum chunk count
 pluginsArr.push(new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}))	//Limit the minimum chunk size
@@ -125,8 +136,7 @@ module.exports = {
 	},
 	plugins: pluginsArr,
 	externals: {
-		"jquery": "jQuery",			//不用加载，可以在外部使用
-		"womkim" : "womkim"
+		"jquery": "jQuery"			//不用加载，可以在外部使用
 	},
 	resolve:{
 		extensions: ['', '.js', '.css', '.jade', '.less', '.jpg', '.png', '.scss', '.coffee'],
