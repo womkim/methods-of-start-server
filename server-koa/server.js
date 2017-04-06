@@ -23,13 +23,13 @@ const app = new koa();
 
 const PORT = process.env.PORT || 3000;
 const siteDir = '../test/'
-const proxyURL = 'https://gz.wpmeichu.com';
+const proxyURL = '';
 
 //把图片和数据接口代理到线上，即用本地的静态文件，用线上的图片和数据
-app.use(proxy({
-  host: proxyURL,
-  match: /^\/(api|image)\//i
-}));
+// app.use(proxy({
+//   host: proxyURL,
+//   match: /^\/(api|image)\//i
+// }));
 
 //获取本地的静态文件
 app.use(staticServer({
