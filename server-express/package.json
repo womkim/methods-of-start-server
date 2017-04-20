@@ -1,0 +1,21 @@
+{
+  "name": "server-express",
+  "version": "1.0.0",
+  "description": "create server with express",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "server"
+  ],
+  "author": "womkim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-http-proxy": "^0.11.0",
+    "open": "0.0.5"
+  }
+}
